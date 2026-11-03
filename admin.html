@@ -1,0 +1,11 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>MO&I ADMIN</title><style>body{background:#000;color:#fff;font-family:sans-serif;padding:20px}input{width:100%;padding:12px;margin:8px 0;border-radius:8px;border:1px solid #333;background:#111;color:#fff}button{background:#d4af37;color:#000;padding:12px;border-radius:8px;font-weight:bold;border:0;width:100%} .card{background:#111;padding:15px;border-radius:10px;margin-top:15px;border:1px solid #222}</style></head><body>
+<div id="login"><h2 style="color:#d4af37">MO&I ADMIN LOGIN</h2><input id="pass" type="password" placeholder="Password: moi2026"><button onclick="login()">INGIA</button><p style="color:#888;font-size:12px">Password ya mwanzo ni: moi2026</p></div>
+<div id="panel" style="display:none"><h2 style="color:#d4af37">Karibu Admin MO&I</h2>
+<div class="card"><h4>1. Weka Namba ya WhatsApp</h4><input id="wa" placeholder="255712345678"><button onclick="saveWA()">HIFADHI NAMBA</button></div>
+<div class="card"><h4>2. Ongeza Bidhaa Mpya</h4><input id="name" placeholder="Jina la bidhaa"><input id="price" placeholder="Bei mf 45000 TZS"><input id="img" placeholder="Link ya picha"><button onclick="alert('Kwa sasa ongeza bidhaa kwa kuhariri index.html - mfumo kamili unakuja!')">ONGEZA (SOON)</button></div>
+<p style="margin-top:20px"><a href="index.html" style="color:#d4af37">← Rudi kwenye Website</a></p>
+</div>
+<script>
+function login(){if(document.getElementById('pass').value==='moi2026'){document.getElementById('login').style.display='none';document.getElementById('panel').style.display='block';}else alert('Password sio sahihi - tumia moi2026')}
+function saveWA(){let n=document.getElementById('wa').value;if(n){localStorage.setItem('moi_wa',n);alert('Namba imehifadhiwa: '+n+'\nSasa nenda ka-hariri index.html weka '+n);}}
+</script></body></html>
